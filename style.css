@@ -1,0 +1,187 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --white-color: #fff;
+  --pink-color: #c93b76;
+
+  --text-color: #adadad;
+  --text-gradient: linear-gradient(90deg, #f64f59 0%, #c471ed 100%);
+
+  --player-bg: #121826;
+  --player-color: #4d5562;
+  --player-color-alt: #e5e7eb;
+  --player-gradient: linear-gradient(
+    0deg,
+    rgba(154, 59, 103, 1) 0%,
+    rgba(66, 67, 116, 1) 62%
+  );
+}
+
+/*=============== BASE ===============*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: url("assets/img/bg.jpg") no-repeat fixed center;
+  background-size: cover;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*=============== MUSIC PROJECT CONTAINER ===============*/
+
+.music-project {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  color: var(--text-color);
+}
+
+.m-txt__project {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/*=============== MUSIC TEXT ===============*/
+
+.m-txt__title {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+.m-txt__title-span {
+  background: none;
+  -webkit-text-fill-color: var(--text-color);
+}
+
+.music-text__languages-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  list-style: none;
+}
+
+/*=============== MUSIC PLAYER ===============*/
+
+.music-player__wrapper {
+  padding: 0.3rem;
+  border-radius: 12px;
+  background: var(--player-gradient);
+}
+
+.m-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--player-bg);
+}
+
+.m-player__song-artwork img {
+  max-width: 18rem;
+  border-radius: 12px;
+}
+
+.m-player__song-info {
+  text-align: center;
+}
+
+.m-player__title {
+  color: var(--player-color-alt);
+  font-size: 1rem;
+}
+
+.m-player__artist {
+  margin-block: 6px;
+  color: var(--player-color);
+  font-size: 0.75rem;
+}
+
+.m-player__time {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--player-color);
+  font-size: 0.625rem;
+}
+
+.m-player__progress-bar {
+  height: 6px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: var(--white-color);
+  cursor: pointer;
+}
+
+.m-player__progress {
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  background: var(--pink-color);
+  transition: width 0.1s linear;
+}
+
+.m-player__control-btn {
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  color: var(--player-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#play {
+  height: 4rem;
+  width: 4rem;
+  margin-inline: 24px;
+  padding: 10px;
+  background: var(--pink-color);
+  color: var(--player-color-alt);
+  font-size: 2rem;
+  box-shadow: 0 0 20px 0 rgb(76, 66, 114);
+}
+
+#prev,
+#next {
+  height: 2.75rem;
+  width: 2.75rem;
+  box-shadow: 0 0 10px -3px rgb(77, 85, 98);
+  background: transparent;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+
+@media screen and (max-width: 800px) {
+  .music-project {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .music-text {
+    text-align: center;
+  }
+
+  .music-text br {
+    display: none;
+  }
+
+  .music-text__languages-wrapper {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--=============== FONT AWESOME ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--=============== JS ===============-->
+    <script type="module" src="constants.js" defer></script>
+    <script type="module" src="main.js" defer></script>
+
+    <title>Music Player</title>
+  </head>
+  <body>
+    <main class="music-project">
+      <!--=============== MUSIC TEXT ===============-->
+
+      <div class="music-text">
+        <p class="m-txt__project">Javascript Project</p>
+        <h1 class="m-txt__title">
+          Music
+          <br />
+          <span class="m-txt__title-span">Player</span>
+        </h1>
+        <ul class="music-text__languages-wrapper">
+          <li class="m-txt__languages">HTML5</li>
+          <li class="m-txt__languages">CSS3</li>
+          <li class="m-txt__languages">Javascript</li>
+        </ul>
+      </div>
+
+      <!--=============== MUSIC PLAYER ===============-->
+
+      <div class="music-player__wrapper">
+        <div class="m-player">
+          <div class="m-player__song-artwork">
+            <img src="" alt="Song Artwork" />
+          </div>
+
+          <div class="m-player__song-info">
+            <div class="m-player__title"></div>
+            <div class="m-player__artist"></div>
+          </div>
+
+          <div class="m-player__time">
+            <div class="m-player__start-time">00:00</div>
+            <div class="m-player__total-time">00:00</div>
+          </div>
+
+          <div class="m-player__progress-bar">
+            <div class="m-player__progress"></div>
+            <audio src=""></audio>
+          </div>
+
+          <div class="m-player__control">
+            <button id="prev" class="m-player__control-btn">
+              <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <button id="play" class="m-player__control-btn">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="m-player__control-btn">
+              <i class="fa-solid fa-forward-step"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
